@@ -5,8 +5,8 @@ from core_app import models
 # Register your models here.
 
 class UserAdmin(ModelAdmin):
-    ordering= ['id']
-    list_display = ['email','name']
+    ordering= ('id',)
+    list_display = ('email','name',)
     fieldsets = (
         (None, {'fields':('email','password')} ),
         ('Personal Info' ,{'fields':('name',)}),
